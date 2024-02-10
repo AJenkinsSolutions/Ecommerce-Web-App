@@ -12,4 +12,6 @@ export class Product {
         this.price = price;
         this.image_url = image_url;
     }
+
+
 }
