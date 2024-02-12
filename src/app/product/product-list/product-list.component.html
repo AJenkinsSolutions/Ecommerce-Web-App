@@ -1,6 +1,13 @@
 <p>product-list works!</p>
 
 
-<button (click)="getAllProducts()">
- push me 
-</button>
+
+<div *ngFor="let product of productsArray">
+
+    <p>{{product.name}}</p>
+
+
+
+
+</div>
+
