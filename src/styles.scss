@@ -1,3 +1,40 @@
+//Import angular material
+@use '@angular/material' as mat;
+
+//Inculde core componenets
+@include mat.core();
+
+// Dark mode 
+//Define each element of the Dark mode theme
+$dark-primary: mat.define-palette(mat.$indigo-palette);
+$dark-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dark-warn: mat.define-palette(mat.$red-palette);
+
+
+//Define the theme
+//This is essentially the constructor for the theme
+$dark-theme: mat.define-dark-theme((
+color: (
+primary: $dark-primary,
+accent: $dark-accent,
+warn: $dark-warn,
+)
+));
+
+  
+  
+  
+// Include theme styles for core and each component used in your app.
+// * This does not include non angular material components *
+// background coor will not be changed by default
+@include mat.all-component-themes($dark-theme);
+
+  
+.product-card {
+    max-width: 400px;
+  }
+
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
