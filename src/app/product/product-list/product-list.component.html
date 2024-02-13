@@ -1,5 +1,7 @@
 <p>product-list works!</p>
-<div *ngFor="let product of productsArray">
+
+<div fxLayout="row wrap" fxLayoutGap="20px">
+  <div *ngFor="let product of productsArray">
 
     <mat-card class="product-card">
       
@@ -17,7 +19,9 @@
         </mat-card-actions>
       </mat-card>
     
+  </div>
 </div>
+
 
 
   
