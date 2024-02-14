@@ -7,6 +7,7 @@ const routes: Routes = [
   // Creates redirect to our product route when no endpoint is given
   {path: '', redirectTo: '/products', pathMatch: 'full'},
   {path: 'products', component: ProductListComponent}
+  {path: 'cart', component: }
 ];
 
 @NgModule({
