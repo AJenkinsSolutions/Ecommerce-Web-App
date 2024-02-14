@@ -1,29 +1,5 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
-.product-card {
-    max-width: 200px;
-  }
-
-  mat-card:hover{
-    transform: scale(1.01);
-    cursor: pointer;
-  }
-
-  mat-card{
-    transition: transform .3s;
-  }
-
-  .container {
-    padding: 50px;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .container-sm{
-    padding: 50px;
-    max-width: 800px;
-    margin: auto; 
-  }
 
 
 /* You can add global styles to this file, and also import other style files */
@@ -37,4 +13,37 @@ body {
 
 
 
+mat-card:hover{
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+mat-card{
+  transition: transform .3s;
+}
+
+.container {
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container-sm{
+  padding: 50px;
+  max-width: 800px;
+  margin: auto; 
+}
+
+
+.product-card {
+  max-width: 200px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
 
