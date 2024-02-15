@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from'@angular/common/http';
 import { ProductModule } from './product/product.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartModule } from './cart/cart.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     ProductModule,
+    CartModule,
     BrowserAnimationsModule
     
   ],
