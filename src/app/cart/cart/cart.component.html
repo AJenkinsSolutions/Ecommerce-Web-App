@@ -1,13 +1,20 @@
 
 
 <div class="container-sm" >
+    <h1>Your Cart</h1>
 
-   <mat-list role="list" *ngFor="let product of productArray">
-        <mat-list-item role="listitem">
-          {{product.name}}
-        </mat-list-item>
-
-   </mat-list>
-
+    <mat-card>
+        <mat-list role="list">
+           
+            <mat-list-item role="listitem" *ngFor="let product of productArray">
+              <span matListItemTitle>{{product.name}}</span>
+              <span matListItemLine>{{product.price | currency}}</span>
+            </mat-list-item>
+    
+       </mat-list>
+    
+    </mat-card>
+   
 
 </div>
+
