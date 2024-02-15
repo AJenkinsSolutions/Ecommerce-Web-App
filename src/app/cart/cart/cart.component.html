@@ -10,6 +10,11 @@
               <span matListItemTitle>{{product.name}}</span>
               <span matListItemLine>{{product.price | currency}}</span>
             </mat-list-item>
+
+            <mat-list-item>
+                <span matListItemTitle>TOTAL (USD)</span>
+                <span matListItemLine class="price">{{totalPrice | currency}}</span>
+              </mat-list-item>
     
        </mat-list>
     

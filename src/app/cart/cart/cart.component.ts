@@ -12,6 +12,8 @@ export class CartComponent implements OnInit{
 
  productArray: Product[] = [];
 
+ totalPrice: number = 0;
+
   constructor(private cartService: CartService){}
 
 
@@ -22,10 +24,13 @@ export class CartComponent implements OnInit{
       console.log(obj);
       this.productArray = obj; 
 
+      this.totalPrice = this.productArray.reduce((accumulator, item) => accumulator + item.price, 0);
+    
+      console.log("Total price " + this.totalPrice) 
+
     })
 
-
-    
+      
   }
 
   
