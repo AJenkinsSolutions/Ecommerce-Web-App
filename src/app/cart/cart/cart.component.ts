@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart.service';
 import { OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-cart',
@@ -9,6 +10,7 @@ import { OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit{
 
+ productArray: Product[] = [];
 
   constructor(private cartService: CartService){}
 
@@ -18,6 +20,7 @@ export class CartComponent implements OnInit{
     this.cartService.getCartItems().subscribe( obj => {
 
       console.log(obj);
+      this.productArray = obj; 
 
     })
 

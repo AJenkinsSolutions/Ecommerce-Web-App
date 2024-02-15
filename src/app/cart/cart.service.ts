@@ -33,7 +33,7 @@ export class CartService {
   } 
 
 
-  clearCart(obj: Product): Observable<void>{
+  clearCart(): Observable<void>{
 
    
     return this.http.delete<void>(environment.API_BASE_URL + this.del)
