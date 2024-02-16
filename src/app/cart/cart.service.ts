@@ -17,6 +17,8 @@ export class CartService {
 
   private del: string = '/cartDel';
 
+  
+
   getCartItems():Observable<Product[]>{
 
     return this.http.get<Product[]>(environment.API_BASE_URL + this.getAllEndPoint);
@@ -27,9 +29,9 @@ export class CartService {
   addToCart(obj :Product): Observable<Product>{
 
     const body: Product = obj;
-
+    console.log("saved")
     return this.http.post<Product>(environment.API_BASE_URL + this.post, body);
-
+    
   } 
 
 

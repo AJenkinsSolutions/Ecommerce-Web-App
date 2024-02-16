@@ -3,6 +3,7 @@ import { CartService } from '../cart.service';
 import { OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -17,6 +18,8 @@ export class CartComponent implements OnInit{
   constructor(private cartService: CartService){}
 
 
+
+
   ngOnInit(): void {
 
     this.cartService.getCartItems().subscribe( obj => {
@@ -29,11 +32,24 @@ export class CartComponent implements OnInit{
       console.log("Total price " + this.totalPrice) 
 
     })
+  
 
       
   }
 
-  
+
+  clear(): void{
+
+    this.cartService.clearCart().subscribe(ob => console.log(ob))
+
+  }
+
+  checkout(){
+
+   this.cartService.addToCart(this.productArray[0]).subscribe(obj => console.log(obj))
+  }  
+
+ 
 
 
 }
