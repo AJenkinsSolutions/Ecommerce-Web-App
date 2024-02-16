@@ -4,7 +4,7 @@ import { OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartService } from 'src/app/cart/cart.service';
-import { config } from 'rxjs';
+
 
 
 @Component({

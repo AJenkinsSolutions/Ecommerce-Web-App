@@ -6,6 +6,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { FlexModule } from '@angular/flex-layout';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input'
+import { MatSelectModule} from '@angular/material/select';
 
 
 
@@ -19,7 +21,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FlexModule,
     MatToolbarModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule, 
+    MatInputModule,
+   MatSelectModule
   ],
   exports: [
     ProductListComponent,
