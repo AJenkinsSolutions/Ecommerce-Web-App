@@ -51,5 +51,13 @@ export class ProductListComponent implements OnInit{
   }
 
 
+  applyfilter(event: Event): void{
+
+     let searchTerm = (event.target as HTMLInputElement).value;
+     searchTerm
+
+  }
+
+
 
 }
