@@ -15,7 +15,7 @@ import { CartService } from 'src/app/cart/cart.service';
 export class ProductListComponent implements OnInit{
 
   productsArray: Product[] = [];
-
+  filteredProducts: Product[] = []; 
 
   constructor(private productService: ProductService,private cartService: CartService, private _snackBar: MatSnackBar){}
 
@@ -25,6 +25,8 @@ export class ProductListComponent implements OnInit{
      this.productService.getAllProducts()?.subscribe(array => {
 
       this.productsArray = array;
+      this.filteredProducts = array; 
+      
       console.log(this.productsArray)
 
     })
@@ -54,7 +56,11 @@ export class ProductListComponent implements OnInit{
   applyfilter(event: Event): void{
 
      let searchTerm = (event.target as HTMLInputElement).value;
-     searchTerm
+     searchTerm = searchTerm.toLowerCase();
+
+     this.filteredProducts = this.productsArray.filter(
+      product => product.name.toLowerCase().includes(searchTerm)
+     )
 
   }
 

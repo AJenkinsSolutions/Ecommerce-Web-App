@@ -2,12 +2,18 @@
 
   <h2>Our latest Collection</h2>
 
+
+  <mat-form-field>
+    <input  matInput (keyup)="applyfilter($event)" placeholder="Search">
+  </mat-form-field>
+
+
   <div fxLayout="row wrap" fxLayoutGap="20px grid">
-    <div *ngFor="let product of productsArray">
+    <div *ngFor="let product of filteredProducts">
   
       <mat-card class="product-card" (click)="addToCart(product)">
         
-          <img mat-card-image src= "assets/images/{{product.image_url}}">
+          <img mat-card-image src= "assets/Images/{{product.image_url}}">
           <mat-card-title>{{product.name}}</mat-card-title>
             <mat-card-subtitle>{{product.price | currency: 'USD'  }}</mat-card-subtitle>
           <mat-card-content>
